@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -18,12 +19,14 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-slate-700 to-slate-900 rounded" />
-              <span className="text-xl font-bold text-slate-900">
-                GRUPO INJEPOL
-              </span>
-            </div>
+            <Image
+              src="/images/logos/logotipo-grupo-injepol-horizontal@3x.webp"
+              alt="Grupo Injepol"
+              width={180}
+              height={40}
+              className="h-9 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

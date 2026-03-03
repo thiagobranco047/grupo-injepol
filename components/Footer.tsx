@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { companies } from '@/data/companies';
 
 export default function Footer() {
@@ -10,7 +11,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Sobre o Grupo */}
           <div className="lg:col-span-2">
-            <h3 className="text-white text-lg font-bold mb-4">Grupo Injepol</h3>
+            <Image
+              src="/images/logos/logotipo-grupo-injepol-horizontal-branco@3x.webp"
+              alt="Grupo Injepol"
+              width={180}
+              height={40}
+              className="h-9 w-auto mb-4"
+            />
             <p className="text-sm leading-relaxed mb-4">
               Tradição e inteligência em poliuretano e soluções industriais. 
               Injepol, Fenap e Moramo Brasil — empresas complementares, unidas 

@@ -3,6 +3,7 @@ export interface Company {
   name: string;
   slug: string;
   logoInitials: string;
+  logoPath: string;
   slogan?: string;
   description: string;
   diferenciais: string[];
@@ -18,6 +19,7 @@ export const companies: Company[] = [
     name: 'Injepol',
     slug: 'injepol',
     logoInitials: 'IJ',
+    logoPath: '/images/logos/logo-injepol.webp',
     slogan: 'Injepol: a escolha inteligente.',
     description: 'A Injepol é especializada em injeção de poliuretano e peças técnicas para diversos segmentos — hospitalar, lazer, utilidade doméstica, segurança e automotivo. Possui alto nível técnico no processo de injeção e construção de moldes, estrutura com máquinas injetoras de alta capacidade e atua em parceria com outras indústrias no desenvolvimento de novos produtos e na redução de custos de fabricação.',
     diferenciais: [
@@ -29,14 +31,15 @@ export const companies: Company[] = [
     ],
     setorTags: ['Hospitalar', 'Lazer', 'Utilidade Doméstica', 'Segurança', 'Automotivo'],
     siteUrl: 'https://www.injepol.com.br/',
-    contactEmail: 'contato@injepol.com.br',
-    whatsapp: '(47) 99999-9999'
+    contactEmail: 'injepol@injepol.com.br',
+    whatsapp: '(47) 99251-2651'
   },
   {
     id: 'fenap',
     name: 'Fenap',
     slug: 'fenap',
     logoInitials: 'FN',
+    logoPath: '/images/logos/logo-fenap.webp',
     slogan: '',
     description: 'A Fenap Poliuretano e Artefatos de Madeira Ltda atua desde 1971 no segmento de injeção de poliuretano, sendo pioneira no Brasil na injeção de PU Rígido Estrutural. Atende setores como hospitalar, automobilístico, moveleiro, refrigeração, construção civil, informática, pet shop, acessórios para gôndolas e check-outs, acessórios para banheiras de hidromassagem, além de peças técnicas e projetos especiais sob encomenda. Trabalha com sistemas como PU Estrutural Rígido, Integral Skin, Espuma Flexível, Espuma Rígida e Embalagem. Possui setor de marcenaria para produção de acessórios de mobiliário e decoração.',
     diferenciais: [
@@ -47,14 +50,15 @@ export const companies: Company[] = [
     ],
     setorTags: ['Hospitalar', 'Automobilístico', 'Moveleiro', 'Refrigeração', 'Construção Civil', 'Pet Shop'],
     siteUrl: 'https://fenap.com.br/',
-    contactEmail: 'contato@fenap.com.br',
-    whatsapp: '(47) 98888-8888'
+    contactEmail: 'fenap@fenap.com.br',
+    whatsapp: '(47) 99251-2651'
   },
   {
     id: 'moramo',
     name: 'Moramo Brasil',
     slug: 'moramo',
     logoInitials: 'MB',
+    logoPath: '/images/logos/logo-moramo.webp',
     slogan: '',
     description: 'A Moramo Brasil é uma marca voltada a produtos de decoração e casa, com foco em design, qualidade e peças com valor agregado. Integra o Grupo Injepol, somando presença em um mercado voltado ao consumidor final, mantendo o compromisso com padrão, acabamento e confiabilidade.',
     diferenciais: [
@@ -65,8 +69,8 @@ export const companies: Company[] = [
     ],
     setorTags: ['Decoração', 'Casa', 'Design'],
     siteUrl: 'https://www.moramo.com.br/',
-    contactEmail: 'contato@moramo.com.br',
-    whatsapp: '(47) 97777-7777'
+    contactEmail: 'loja@moramo.com.br',
+    whatsapp: '(47) 99251-2651'
   }
 ];
 

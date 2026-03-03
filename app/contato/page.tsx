@@ -51,7 +51,7 @@ export default function ContatoPage() {
             </div>
 
             {/* Nota sobre dados de contato */}
-            <div className="mt-6 p-4 bg-slate-50 rounded border border-slate-200">
+            {/* <div className="mt-6 p-4 bg-slate-50 rounded border border-slate-200">
               <p className="text-sm text-slate-600">
                 <strong>Nota:</strong> Os dados de contato acima são placeholders. 
                 Para atualizar com informações reais, edite o arquivo{' '}
@@ -59,7 +59,7 @@ export default function ContatoPage() {
                   data/companies.ts
                 </code>
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </Section>

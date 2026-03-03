@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Hero from '@/components/Hero';
 import Section from '@/components/Section';
-import LogoPlaceholder from '@/components/LogoPlaceholder';
 import { companies } from '@/data/companies';
 import Link from 'next/link';
 
@@ -55,7 +55,15 @@ export default async function CompanyPage({ params }: CompanyPageProps) {
         <div className="max-w-4xl mx-auto">
           {/* Logo e Informações Básicas */}
           <div className="flex items-start space-x-6 mb-8">
-            <LogoPlaceholder initials={company.logoInitials} size="lg" />
+            <div className="w-28 h-28 relative flex-shrink-0 bg-white rounded-lg overflow-hidden border border-slate-100">
+              <Image
+                src={company.logoPath}
+                alt={`Logo ${company.name}`}
+                fill
+                className="object-contain p-2"
+                sizes="112px"
+              />
+            </div>
             <div className="flex-1">
               <h2 className="text-2xl font-bold text-slate-900 mb-2">
                 Sobre a {company.name}

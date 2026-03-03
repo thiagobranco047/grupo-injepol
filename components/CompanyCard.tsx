@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import LogoPlaceholder from './LogoPlaceholder';
+import Image from 'next/image';
 
 interface CompanyCardProps {
   name: string;
   description: string;
   tags: string[];
-  logoInitials: string;
+  logoPath: string;
   href: string;
 }
 
@@ -13,26 +13,32 @@ export default function CompanyCard({
   name,
   description,
   tags,
-  logoInitials,
+  logoPath,
   href,
 }: CompanyCardProps) {
   return (
     <div className="bg-white border border-slate-200 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
-      <div className="flex items-start space-x-4 mb-4">
-        <LogoPlaceholder initials={logoInitials} size="sm" />
-        <div className="flex-1">
-          <h3 className="text-xl font-bold text-slate-900 mb-2">{name}</h3>
-          <div className="flex flex-wrap gap-2">
-            {tags.slice(0, 3).map((tag) => (
-              <span
-                key={tag}
-                className="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
+      <div className="w-full h-40 relative mb-5 bg-white rounded-lg overflow-hidden border border-slate-100 flex items-center justify-center">
+        <Image
+          src={logoPath}
+          alt={`Logo ${name}`}
+          fill
+          className="object-contain p-5"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </div>
+
+      <h3 className="text-xl font-bold text-slate-900 mb-2">{name}</h3>
+
+      <div className="flex flex-wrap gap-2 mb-4">
+        {tags.slice(0, 3).map((tag) => (
+          <span
+            key={tag}
+            className="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded"
+          >
+            {tag}
+          </span>
+        ))}
       </div>
 
       <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow line-clamp-4">

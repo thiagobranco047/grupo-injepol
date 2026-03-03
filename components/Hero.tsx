@@ -1,23 +1,26 @@
-import ImagePlaceholder from './ImagePlaceholder';
+import Image from 'next/image';
 
 interface HeroProps {
   title: string;
   subtitle?: string;
   description?: string;
   className?: string;
+  imageSrc?: string;
 }
 
-export default function Hero({ title, subtitle, description, className = '' }: HeroProps) {
+export default function Hero({ title, subtitle, description, className = '', imageSrc }: HeroProps) {
+  const bgImage = imageSrc || '/images/industria-poliuretano.webp';
+
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      {/* Background */}
-      <ImagePlaceholder 
-        className="absolute inset-0 w-full h-full" 
-        alt="Hero background"
+    <div className={`relative overflow-hidden bg-black ${className}`}>
+      <Image
+        src={bgImage}
+        alt=""
+        fill
+        className="object-cover opacity-40"
+        priority
+        sizes="100vw"
       />
-      
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-slate-900/70" />
       
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 lg:py-40">

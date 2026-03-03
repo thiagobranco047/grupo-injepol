@@ -56,7 +56,7 @@ export default function Home() {
               name={company.name}
               description={company.description}
               tags={company.setorTags}
-              logoInitials={company.logoInitials}
+              logoPath={company.logoPath}
               href={`/empresas/${company.slug}`}
             />
           ))}
